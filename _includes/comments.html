@@ -57,7 +57,7 @@
                 var cavatarlink = data[i].user.avatar_url;
             {% endif %}
             var cdate = data[i].created_at;
-            document.getElementById("comments").innerHTML = document.getElementById("comments").innerHTML + "<div class='comment'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="' + cuser + '">' + "</div><div class='commentheader'><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a> commented <a class='commentdate' href=\"" + clink + "\">on " + cdate.substring(0, 10) + "</a></div><div class='commentbody'>" + cbody + "</div></div>";
+            document.getElementById("comments").innerHTML = document.getElementById("comments").innerHTML + "<div class='comment'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="' + cuser + '" style={"display":"inline-block"}>' + "</div><div class='commentheader'><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a> commented <a class='commentdate' href=\"" + clink + "\">on " + cdate.substring(0, 10) + "</a></div><div class='commentbody'>" + cbody + "</div></div>";
             $('img[data-src]').replaceWith( "[Image blocked] " );
         }
     }
