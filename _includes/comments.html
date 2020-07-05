@@ -1,6 +1,6 @@
 {% if page.comment_issue_id %}
 <script type="text/javascript">
-    document.querySelector("{{ include.element }}").innerHTML = document.querySelector("{{ include.element }}").innerHTML + "<div id='comments'></div>";
+    document.querySelector("{{ include.element }}").innerHTML = document.querySelector("{{ include.element }}").innerHTML + "<div id='comments' style='max-width: 740px;margin-right: auto;margin-left: auto;padding-right: 30px;padding-left:30px'></div>";
     document.getElementById("comments").innerHTML = "<h3>Comments</h3><p>You can <a href='https://github.com/{{ include.github_account }}/issues/{{page.comment_issue_id}}' target='_blank'>view the comments</a> on GitHub.</p>";
 
     function reloadComments() {
@@ -74,34 +74,4 @@
         {% endif %}
     }
 </script>
-<style>
-#comments {
-    max-width: -webkit-calc(800px -(30px * 2));
-    max-width: calc(800px -(30px * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 30px;
-    padding-left:30px
-}
-.comment {padding: 5px 0 15px;}
-.comment P:last-child {margin-bottom: 0;}
-.commentgravatar {position: absolute; width: 40px; border: 1px solid #e5e5e5;}
-.commentheader, .commentbody {padding: 5px 10px; margin-left: 55px; border: 1px solid #e5e5e5; background: white;}
-.commentheader {position: relative; background: #f4f4f4; border-bottom: 0;}
-.commentbody {padding: 10px 10px 13px;}
-.commentheader a {color: #777777;}
-.commentheader::before {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 9px;
-    height: 9px;
-    background: #f4f4f4;
-    transform: rotate(-45deg);
-    left: 0;
-    margin-left: -4px;
-    margin-top: 4px;
-    box-shadow: -1px -1px 0px 0px rgba(0, 0, 0, 0.15);
-}
-</style>
 {% endif %}
