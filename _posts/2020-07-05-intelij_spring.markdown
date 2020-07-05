@@ -2,6 +2,7 @@
 layout: post
 title:  "Using Spring Boot in Intelij Community version"
 date:   2020-07-05 11:23:20 +0800
+comment_issue_id: 1
 categories: spring
 ---
 Intelij is a great software but the ultimate version is paid. The community version doesn't have great support for spring framework. In the ultimate version, we can easily start a Spring boot project with the Spring Initiallizr plugin but the Community version doesn't have it.

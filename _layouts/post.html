@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<p>{{ page.date }} - Written by {{ page.author }}</p>
+
+{{ content }}
+
+<script src="/js/jquery.min.js"></script>
+{% include comments.html element=".post-content" github_account="jhvanderschee/jekyllcodex" require_cookie_consent="true" %}
