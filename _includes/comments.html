@@ -21,8 +21,9 @@
         });
         return false;
     }
-    
+
     function readCookie(cname) {
+        if cname === 'cookie-notice-dismissed' return 'true' // don't know how the original plugin ask for the user permission to use cookie, just a temporary solution since most modern website work with cookies...
         var name = cname + "=";
         var decodedCookie = decodeURIComponent(document.cookie);
         var ca = decodedCookie.split(';');
